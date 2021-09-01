@@ -56,5 +56,12 @@ float m2d(long seconds);
 // hours to degrees (0-360)
 float h2d(long seconds);
 
+/**
+ * @brief Does a point (px,py) is inside or nor a tringle (x1,y1 / x2,y2 / x3,Y3)
+ * 
+ * @return true The point is inside
+ * @return false The point is outside
+ */
 bool pointInsideTriangle(float px, float py, float x1, float y1, float x2, float y2, float x3, float y3);
+
 #endif
