@@ -948,6 +948,19 @@ class Graphics2D {
     }
   }
 
+/**
+ * @brief Draw an arc from the center of screen
+ * 
+ * @param radius Radius of the arc
+ * @param startAngle start angle of the arc in degres (0° is 12PM, 90° is 3AM, etc.)
+ * @param endAngle end angle of the arc in degres (0° is 12PM, 90° is 3AM, etc.)
+ * @param color color code of the arc
+ * @param lineRadius radius width of the arc.
+ */
+  void drawArcFromCenter(uint16_t radius, float startAngle,  float endAngle, uint16_t color,uint8_t  lineRadius){
+    drawArc(BUF_W, BUF_H,startAngle,endAngle,(endAngle-startAngle)/10,radius,lineRadius, color,true);
+  }
+  
   /**
    * Draw an arc
    *
